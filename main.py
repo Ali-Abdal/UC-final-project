@@ -88,7 +88,7 @@ def excute_command(command):
         2. avrage age
         3. students in each uni
         4. students in each major
-        5. male and female in each country
+        5. female and male students statics
 
         ====================
 
@@ -180,7 +180,7 @@ def student_info(for_what,index):
         for item in students:
             if item["civilid"] == index:  # checks if any of the students civilId match the function input
                 output = students[list_index]["name"] # then it takes the matched student name
-            
+
             list_index += 1
     
     # search for number
@@ -191,13 +191,14 @@ def student_info(for_what,index):
             for item in students:
                 if item["civilid"] == index: # checks if any of the students civilId match the function input
                     output = students[list_index]["number"] # then it takes the matched student number
-                
+
                 list_index +=1
         
         else:
             for item in students:
                 if item["name"] == index: # checks if any of the students name match the function input
                     output = students[list_index]["number"] # then it takes the matched student number
+
             list_index += 1           
 
     # search for civil id
@@ -206,7 +207,7 @@ def student_info(for_what,index):
         for item in students:
             if item["name"] == index: # checks if any of the students name match the function input
                 output = students[list_index]["civilid"] # then it takes the matched student civilid
-            
+
             list_index += 1
 
     # search for major
@@ -217,14 +218,14 @@ def student_info(for_what,index):
             for item in students:
                 if item["civilid"] == index: # checks if any of the students civilId match the function input
                     output = students[list_index]["major"] # then it takes the matched student major
-                
+
                 list_index +=1
         
         else:
             for item in students:
                 if item["name"] == index: # checks if any of the students name match the function input
                     output = students[list_index]["major"] # then it takes the matched student major
-            
+ 
             list_index += 1
 
     # search for age
@@ -235,14 +236,14 @@ def student_info(for_what,index):
             for item in students:
                 if item["civilid"] == index: # checks if any of the students civilId match the function input
                     output = students[list_index]["age"] # then it takes the matched student age
-                
+         
                 list_index +=1
         
         else:
             for item in students:
                 if item["name"] == index: # checks if any of the students name match the function input
                     output = students[list_index]["age"] # then it takes the matched student age
-            
+        
             list_index += 1
 
     # search for country
@@ -253,14 +254,14 @@ def student_info(for_what,index):
             for item in students:
                 if item["civilid"] == index: # checks if any of the students civilId match the function input
                     output = students[list_index]["country"] # then it takes the matched student country
-                
+           
                 list_index +=1
         
         else:
             for item in students:
                 if item["name"] == index: # checks if any of the students name match the function input
                     output = students[list_index]["country"] # then it takes the matched student country
-            
+        
             list_index += 1
 
     # search for uni
@@ -271,14 +272,14 @@ def student_info(for_what,index):
             for item in students:
                 if item["civilid"] == index: # checks if any of the students civilId match the function input
                     output = students[list_index]["uni name"] # then it takes the matched student uni name
-                
+         
                 list_index +=1
         
         else:
             for item in students:
                 if item["name"] == index: # checks if any of the students name match the function input
                     output = students[list_index]["uni name"] # then it takes the matched student uni name
-            
+      
             list_index += 1
 
     # search for advisor
@@ -289,14 +290,14 @@ def student_info(for_what,index):
             for item in students:
                 if item["civilid"] == index: # checks if any of the students civilId match the function input
                     output = students[list_index]["advisor name"] # then it takes the matched student advisor name
-                
+           
                 list_index +=1
         
         else:
             for item in students:
                 if item["name"] == index: # checks if any of the students name match the function input
                     output = students[list_index]["advisor name"] # then it takes the matched student advisor name
-            
+       
             list_index += 1
 
     # search for all
@@ -331,6 +332,7 @@ def student_info(for_what,index):
                     major: {child_major}
                     uni name: {child_uni}
                     """
+                
                 list_index +=1
         
         else:
@@ -361,8 +363,8 @@ def student_info(for_what,index):
                     major: {child_major}
                     uni name: {child_uni}
                     """
-            
-            list_index += 1
+        
+                list_index += 1
 
     return output
 
@@ -489,7 +491,7 @@ while True:
 
         if choice == "civil id":
             name = input("Please enter the studnet name: ")
-            print(student_info("civilid",name))
+            print(student_info("civil id",name))
 
         if choice == "major":
             primary_key = input("Please enter the student's civil id or name: ")
@@ -531,10 +533,10 @@ while True:
             statics("students in each uni")
 
         if choice == "students in each major":
-            print(statics("students in each major"))
+            statics("students in each major")
 
         if choice == "female and male statics":
-            print(statics("female and male statics"))
+            statics("female and male statics")
 
     # services
     if command == "services":
